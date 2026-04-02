@@ -30,10 +30,10 @@ CREATE TABLE lessons (
 
 CREATE TABLE lesson_student (
      id INT AUTO_INCREMENT PRIMARY KEY ,
-     student_id INT NOt null UNIQUE,
-     lesson_id INT NOt null UNIQUE,
+     student_id INT NOt null ,
+     lesson_id INT NOt null ,
      pay_status ENUM('payed','notpayd') DEFAULT 'notpayd',
     FOREIGN KEY (student_id)REFERENCES student (id),
     FOREIGN KEY (lesson_id) REFERENCES lessons (id)
-   
-   
+);  
+
